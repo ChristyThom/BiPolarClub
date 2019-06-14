@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2> The Necessary BiPolar Club Resources </h2>
+<table class="table">
+<tr>
+    <th>Resource Name</th>
+    <th>Resource Type</th>
+    <th>Resource URL</th>
+    <th>Resource Rating</th>
+    <th>Resource Review</th>
+</tr>
+{% for r in resources_list %}
+<tr>
+    <td>{{r.resourcename}}</td>
+    <td>{{r.resoucetype}}</td>
+    <td>{{r.resouceURL}}</td>
+    <td>{{r.rating}}</td>
+    <td>{{r.reviewtext}}</td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}
